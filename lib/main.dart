@@ -1,36 +1,24 @@
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:personalizeguidanceforahealthyheart/Models/Utils.dart';
-import 'package:personalizeguidanceforahealthyheart/Views/Meals/mealsHome.dart';
+import 'package:personalizeguidanceforahealthyheart/Views/Common/SplashScreen.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+      title: 'PGFHH',
+      home: Scaffold(
+        body: SplashScreen(),
       ),
-      home: StartApp(),
     );
-  }
-}
-
-class StartApp extends StatefulWidget {
-  StartApp({Key key}) : super(key: key);
-
-  @override
-  _StartAppState createState() => _StartAppState();
-}
-
-class _StartAppState extends State<StartApp> {
-  @override
-  Widget build(BuildContext context) {
-    Utils.displaySize = MediaQuery.of(context).size;
-
-    return FoodPredictHome();
   }
 }

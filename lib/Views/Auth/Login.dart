@@ -1,8 +1,11 @@
 import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:personalizeguidanceforahealthyheart/Controllers/Auth/AuthController.dart';
 import 'package:personalizeguidanceforahealthyheart/Controllers/Auth/AuthValidator.dart';
 import 'package:personalizeguidanceforahealthyheart/Models/Colors.dart';
+import 'package:personalizeguidanceforahealthyheart/Models/Images.dart';
+import 'package:personalizeguidanceforahealthyheart/Models/Strings.dart';
 import 'package:personalizeguidanceforahealthyheart/Models/Utils.dart';
 import 'package:personalizeguidanceforahealthyheart/Views/Auth/RecoverPassword.dart';
 import 'package:personalizeguidanceforahealthyheart/Views/Auth/Register.dart';
@@ -58,10 +61,7 @@ class _LoginState extends State<Login> {
                 Container(
                   width: Utils.displaySize.width,
                   height: Utils.displaySize.height,
-                  child: Image.asset(
-                    'assets/img/login_bg.png',
-                    fit: BoxFit.cover,
-                  ),
+                  decoration: Utils.getGradientBackground(),
                 ),
                 Container(
                   width: Utils.displaySize.width,
@@ -73,7 +73,14 @@ class _LoginState extends State<Login> {
                       Container(
                         padding: EdgeInsets.only(bottom: spaceAround),
                         width: Utils.displaySize.width * 0.35,
-                        child: Image.asset('assets/img/logo.png'),
+                        child: SizedBox(
+                          child: SvgPicture.asset(
+                            UtilImages.wlogoSVG,
+                            height: Utils.displaySize.width * 0.35,
+                            width: Utils.displaySize.width * 0.35,
+                            fit: BoxFit.contain,
+                          ),
+                        ),
                       ),
                       Padding(
                         padding: EdgeInsets.symmetric(
@@ -91,22 +98,44 @@ class _LoginState extends State<Login> {
                                     ),
                                     Align(
                                       alignment: Alignment.topCenter,
-                                      child: Text('Login'.toUpperCase(),
-                                          style: TextStyle(
-                                              fontSize: 18.0,
-                                              color: UtilColors.greyColor)),
+                                      child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          Text(
+                                              UtilStrings.appTitleSection1
+                                                  .toUpperCase(),
+                                              style: TextStyle(
+                                                  fontSize: 23.0,
+                                                  color:
+                                                      UtilColors.primaryColor)),
+                                          Padding(
+                                            padding: EdgeInsets.only(left: 5.0),
+                                            child: Text(
+                                                UtilStrings.appTitleSection2
+                                                    .toUpperCase(),
+                                                style: TextStyle(
+                                                    fontSize: 23.0,
+                                                    color: UtilColors
+                                                        .secondaryColor)),
+                                          )
+                                        ],
+                                      ),
                                     ),
                                     Align(
                                       alignment: Alignment.topCenter,
                                       child: Padding(
                                         padding: EdgeInsets.only(
-                                            top: 5.0, bottom: 20.0),
+                                            top: 5.0, bottom: 10.0),
                                         child: Text(
                                           'Unlock your access with existing account'
                                               .toUpperCase(),
                                           style: TextStyle(
                                               fontSize: 11.0,
-                                              color: UtilColors.greyColor),
+                                              fontWeight: FontWeight.w600,
+                                              foreground: Paint()
+                                                ..shader =
+                                                    Utils.getTextGradient()),
                                         ),
                                       ),
                                     ),

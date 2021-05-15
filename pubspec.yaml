@@ -32,6 +32,8 @@ dependencies:
   ml_algo: ^16.0.2
   ml_dataframe: ^0.5.1
   ml_preprocessing: ^6.0.0
+  flutter_svg: ^0.22.0
+  
 
 
 dev_dependencies:
@@ -47,6 +49,8 @@ flutter:
     - assets/img/user_sample.png
     - assets/img/logo.png
     - assets/img/login_bg.png
+    - assets/img/logo.svg
+    - assets/img/logowhite.svg
 
 
   # fonts:

@@ -108,4 +108,23 @@ class Utils {
         textColor: Colors.white,
         fontSize: 16.0);
   }
+
+  static getGradientBackground() {
+    return BoxDecoration(
+        gradient: LinearGradient(
+      begin: Alignment.topRight,
+      tileMode: TileMode.decal,
+      end: Alignment.bottomLeft,
+      colors: [
+        UtilColors.primaryColor,
+        UtilColors.secondaryColor,
+      ],
+    ));
+  }
+
+  static getTextGradient() {
+    return LinearGradient(
+      colors: <Color>[UtilColors.primaryColor, UtilColors.secondaryColor],
+    ).createShader(Rect.fromLTWH(0.0, 0.0, 200.0, 70.0));
+  }
 }
