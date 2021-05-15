@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "623395722342",
+    "firebase_url": "https://pgfhh-9decf-default-rtdb.firebaseio.com",
+    "project_id": "pgfhh-9decf",
+    "storage_bucket": "pgfhh-9decf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:623395722342:android:53f3155cb69ff15b6d49a7",
+        "android_client_info": {
+          "package_name": "com.aries.personalizeguidanceforahealthyheart"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "623395722342-m5aak7jpb41i1b36jq4ntbm9vksci0h1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB65jF2s0PDIYDORz-M8eQ6m3CYcJub9xk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "623395722342-m5aak7jpb41i1b36jq4ntbm9vksci0h1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:personalizeguidanceforahealthyheart/Models/Utils.dart';
+import 'package:personalizeguidanceforahealthyheart/Models/Colors.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class FoodPredictHistoryLayout extends StatefulWidget {
@@ -28,7 +28,7 @@ class _FoodPredictHistoryLayoutState extends State<FoodPredictHistoryLayout> {
                 Text(
                   'record history'.toUpperCase(),
                   style: GoogleFonts.openSans(
-                      color: Utils.whiteColor, fontWeight: FontWeight.w600),
+                      color: UtilColors.whiteColor, fontWeight: FontWeight.w600),
                 ),
               ],
             ),
@@ -45,7 +45,7 @@ class _FoodPredictHistoryLayoutState extends State<FoodPredictHistoryLayout> {
                         top: 20.0, bottom: 20.0, left: 10.0, right: 20.0),
                     width: double.infinity,
                     decoration: BoxDecoration(
-                      color: Utils.blackColor.withOpacity(0.3),
+                      color: UtilColors.blackColor.withOpacity(0.3),
                       borderRadius: BorderRadius.circular(10.0),
                     ),
                     child: Padding(
@@ -56,24 +56,24 @@ class _FoodPredictHistoryLayoutState extends State<FoodPredictHistoryLayout> {
                           Text(
                             "meal suggetion complete".toUpperCase(),
                             style: GoogleFonts.openSans(
-                                color: Utils.whiteColor,
+                                color: UtilColors.whiteColor,
                                 fontSize: 15.0,
                                 fontWeight: FontWeight.w600),
                           ),
                           Divider(
-                            color: Utils.whiteColor,
+                            color: UtilColors.whiteColor,
                           ),
                           Text(
                             "result is good. keep it up".toUpperCase(),
                             style: GoogleFonts.openSans(
-                                color: Utils.whiteColor, fontSize: 12.0),
+                                color: UtilColors.whiteColor, fontSize: 12.0),
                           ),
                           Padding(
                             padding: EdgeInsets.only(top: 5.0),
                             child: Text(
                               "03/05/2021 11:09 PM".toUpperCase(),
                               style: GoogleFonts.openSans(
-                                  color: Utils.whiteColor, fontSize: 10.0),
+                                  color: UtilColors.whiteColor, fontSize: 10.0),
                             ),
                           ),
                         ],

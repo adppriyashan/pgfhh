@@ -1,6 +1,6 @@
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:personalizeguidanceforahealthyheart/Models/Utils.dart';
+import 'package:personalizeguidanceforahealthyheart/Models/Colors.dart';
 import 'package:personalizeguidanceforahealthyheart/Views/Stress/Home%20Contents/stressHomeLayout.dart';
 import 'package:personalizeguidanceforahealthyheart/Views/Stress/Home%20Contents/stressSchedule.dart';
 import 'package:personalizeguidanceforahealthyheart/Views/Stress/Home%20Contents/stressSettings.dart';
@@ -26,7 +26,7 @@ class _StressPredictHomeState extends State<StressPredictHome> {
     return SafeArea(
         child: Scaffold(
       bottomNavigationBar: getBottomNavBar(),
-      backgroundColor: Utils.primaryColor,
+      backgroundColor: UtilColors.primaryColor,
       body: _layouts[_selectedIndex],
     ));
   }
@@ -37,29 +37,29 @@ class _StressPredictHomeState extends State<StressPredictHome> {
         TabItem(
             icon: Icon(
               Icons.calculate,
-              color: Utils.whiteColor,
+              color: UtilColors.whiteColor,
               size: 20.0,
             ),
             title: 'Calculate'),
         TabItem(
             icon: Icon(
               Icons.home,
-              color: Utils.whiteColor,
+              color: UtilColors.whiteColor,
               size: 20.0,
             ),
             title: 'Home'),
         TabItem(
             icon: Icon(
               Icons.settings,
-              color: Utils.whiteColor,
+              color: UtilColors.whiteColor,
               size: 20.0,
             ),
             title: 'Settings'),
       ],
       initialActiveIndex: 1,
-      activeColor: Utils.primaryColor,
-      backgroundColor: Utils.blackColor,
-      color: Utils.whiteColor.withOpacity(0.8),
+      activeColor: UtilColors.primaryColor,
+      backgroundColor: UtilColors.blackColor,
+      color: UtilColors.whiteColor.withOpacity(0.8),
       onTap: (_tab) {
         setState(() {
           print(_tab);

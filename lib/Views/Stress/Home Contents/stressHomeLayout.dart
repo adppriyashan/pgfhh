@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:personalizeguidanceforahealthyheart/Models/Colors.dart';
 import 'package:personalizeguidanceforahealthyheart/Models/Utils.dart';
 import 'package:personalizeguidanceforahealthyheart/Views/Stress/stressGraph.dart';
 
@@ -28,22 +29,22 @@ class _StressPredictHomeLayoutState extends State<StressPredictHomeLayout> {
                 Container(
                   padding: EdgeInsets.all(2.0),
                   decoration: BoxDecoration(
-                      color: Utils.whiteColor,
+                      color: UtilColors.whiteColor,
                       borderRadius: BorderRadius.circular(100.0)),
                   child: Icon(
                     Icons.notifications_active,
-                    color: Utils.primaryColor,
+                    color: UtilColors.primaryColor,
                   ),
                 ),
                 Text(
                   'Welcome back !'.toUpperCase(),
                   style: GoogleFonts.openSans(
-                      color: Utils.whiteColor, fontWeight: FontWeight.w600),
+                      color: UtilColors.whiteColor, fontWeight: FontWeight.w600),
                 ),
                 Container(
                   padding: EdgeInsets.all(2.0),
                   decoration: BoxDecoration(
-                      color: Utils.whiteColor,
+                      color: UtilColors.whiteColor,
                       borderRadius: BorderRadius.circular(100.0)),
                   child: SizedBox(
                     width: 23.0,
@@ -68,8 +69,8 @@ class _StressPredictHomeLayoutState extends State<StressPredictHomeLayout> {
                 Container(
                   margin: EdgeInsets.only(bottom: 20.0),
                   decoration: BoxDecoration(
-                      color: Utils.primaryColor,
-                      border: Border.all(color: Utils.whiteColor),
+                      color: UtilColors.primaryColor,
+                      border: Border.all(color: UtilColors.whiteColor),
                       borderRadius: BorderRadius.circular(10.0)),
                   padding:
                       EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
@@ -77,7 +78,7 @@ class _StressPredictHomeLayoutState extends State<StressPredictHomeLayout> {
                     'Click here to reduce your stress'.toUpperCase(),
                     style: GoogleFonts.openSans(
                         fontSize: Utils.smallFonts,
-                        color: Utils.whiteColor,
+                        color: UtilColors.whiteColor,
                         fontWeight: FontWeight.w700),
                   ),
                 ),
@@ -89,7 +90,7 @@ class _StressPredictHomeLayoutState extends State<StressPredictHomeLayout> {
                         top: 20.0, bottom: 20.0, left: 10.0, right: 20.0),
                     width: double.infinity,
                     decoration: BoxDecoration(
-                      color: Utils.blackColor.withOpacity(0.2),
+                      color: UtilColors.blackColor.withOpacity(0.2),
                       borderRadius: BorderRadius.circular(10.0),
                     ),
                     child: Column(
@@ -100,7 +101,7 @@ class _StressPredictHomeLayoutState extends State<StressPredictHomeLayout> {
                           child: Text(
                             'stress balancing activities'.toUpperCase(),
                             style: GoogleFonts.openSans(
-                                color: Utils.whiteColor, fontSize: 15.0),
+                                color: UtilColors.whiteColor, fontSize: 15.0),
                           ),
                         ),
                         SizedBox(
@@ -111,7 +112,7 @@ class _StressPredictHomeLayoutState extends State<StressPredictHomeLayout> {
                           margin: EdgeInsets.only(bottom: 10.0),
                           width: double.infinity,
                           decoration: BoxDecoration(
-                            color: Utils.blackColor.withOpacity(0.2),
+                            color: UtilColors.blackColor.withOpacity(0.2),
                             borderRadius: BorderRadius.circular(10.0),
                           ),
                           child: Row(
@@ -128,7 +129,7 @@ class _StressPredictHomeLayoutState extends State<StressPredictHomeLayout> {
                               Text(
                                 'Meditation'.toUpperCase(),
                                 style: GoogleFonts.openSans(
-                                    color: Utils.whiteColor, fontSize: 15.0),
+                                    color: UtilColors.whiteColor, fontSize: 15.0),
                               )
                             ],
                           ),
@@ -138,7 +139,7 @@ class _StressPredictHomeLayoutState extends State<StressPredictHomeLayout> {
                           margin: EdgeInsets.only(bottom: 10.0),
                           width: double.infinity,
                           decoration: BoxDecoration(
-                            color: Utils.blackColor.withOpacity(0.2),
+                            color: UtilColors.blackColor.withOpacity(0.2),
                             borderRadius: BorderRadius.circular(10.0),
                           ),
                           child: Row(
@@ -155,7 +156,7 @@ class _StressPredictHomeLayoutState extends State<StressPredictHomeLayout> {
                               Text(
                                 'Watching Movies'.toUpperCase(),
                                 style: GoogleFonts.openSans(
-                                    color: Utils.whiteColor, fontSize: 15.0),
+                                    color: UtilColors.whiteColor, fontSize: 15.0),
                               )
                             ],
                           ),
@@ -175,7 +176,7 @@ class _StressPredictHomeLayoutState extends State<StressPredictHomeLayout> {
                         top: 20.0, bottom: 20.0, left: 10.0, right: 20.0),
                     width: double.infinity,
                     decoration: BoxDecoration(
-                      color: Utils.blackColor.withOpacity(0.2),
+                      color: UtilColors.blackColor.withOpacity(0.2),
                       borderRadius: BorderRadius.circular(10.0),
                     ),
                     child: Column(
@@ -186,7 +187,7 @@ class _StressPredictHomeLayoutState extends State<StressPredictHomeLayout> {
                           child: Text(
                             'statistics'.toUpperCase(),
                             style: GoogleFonts.openSans(
-                                color: Utils.whiteColor, fontSize: 15.0),
+                                color: UtilColors.whiteColor, fontSize: 15.0),
                           ),
                         ),
                         SizedBox(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:personalizeguidanceforahealthyheart/Models/Colors.dart';
 import 'package:personalizeguidanceforahealthyheart/Models/Utils.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -28,7 +29,7 @@ class _FoodPredictCalculateLayoutState
                 Text(
                   'calculate'.toUpperCase(),
                   style: GoogleFonts.openSans(
-                      color: Utils.whiteColor, fontWeight: FontWeight.w600),
+                      color: UtilColors.whiteColor, fontWeight: FontWeight.w600),
                 ),
               ],
             ),
@@ -40,7 +41,7 @@ class _FoodPredictCalculateLayoutState
                 Container(
                   margin: EdgeInsets.symmetric(vertical: 20.0),
                   decoration: BoxDecoration(
-                      color: Utils.blackColor,
+                      color: UtilColors.blackColor,
                       borderRadius: BorderRadius.circular(500.0)),
                   child: SizedBox(
                     width: Utils.displaySize.width * 0.6,
@@ -50,7 +51,7 @@ class _FoodPredictCalculateLayoutState
                         'check now'.toUpperCase(),
                         style: GoogleFonts.openSans(
                             fontSize: 25.0,
-                            color: Utils.primaryColor,
+                            color: UtilColors.primaryColor,
                             fontWeight: FontWeight.w700),
                       ),
                     ),
@@ -64,7 +65,7 @@ class _FoodPredictCalculateLayoutState
                         top: 20.0, bottom: 20.0, left: 10.0, right: 20.0),
                     width: double.infinity,
                     decoration: BoxDecoration(
-                      color: Utils.greenColor,
+                      color: UtilColors.greenColor,
                       borderRadius: BorderRadius.circular(10.0),
                     ),
                     child: Padding(
@@ -75,7 +76,7 @@ class _FoodPredictCalculateLayoutState
                           Text(
                             "great, you're at the good state".toUpperCase(),
                             style: GoogleFonts.openSans(
-                                color: Utils.whiteColor, fontSize: 15.0),
+                                color: UtilColors.whiteColor, fontSize: 15.0),
                           ),
                           Padding(
                             padding: EdgeInsets.only(top: 10.0),
@@ -83,7 +84,7 @@ class _FoodPredictCalculateLayoutState
                               "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero"
                                   .toUpperCase(),
                               style: GoogleFonts.openSans(
-                                  color: Utils.whiteColor, fontSize: 12.0),
+                                  color: UtilColors.whiteColor, fontSize: 12.0),
                             ),
                           )
                         ],
@@ -99,7 +100,7 @@ class _FoodPredictCalculateLayoutState
                         top: 20.0, bottom: 20.0, left: 10.0, right: 20.0),
                     width: double.infinity,
                     decoration: BoxDecoration(
-                      color: Utils.blackColor.withOpacity(0.2),
+                      color: UtilColors.blackColor.withOpacity(0.2),
                       borderRadius: BorderRadius.circular(10.0),
                     ),
                     child: Padding(
@@ -110,11 +111,11 @@ class _FoodPredictCalculateLayoutState
                           Text(
                             'nutrition plan'.toUpperCase(),
                             style: GoogleFonts.openSans(
-                                color: Utils.whiteColor, fontSize: 15.0),
+                                color: UtilColors.whiteColor, fontSize: 15.0),
                           ),
                           Icon(
                             Icons.arrow_right,
-                            color: Utils.whiteColor,
+                            color: UtilColors.whiteColor,
                           )
                         ],
                       ),
@@ -129,7 +130,7 @@ class _FoodPredictCalculateLayoutState
                         top: 20.0, bottom: 20.0, left: 10.0, right: 20.0),
                     width: double.infinity,
                     decoration: BoxDecoration(
-                      color: Utils.blackColor.withOpacity(0.2),
+                      color: UtilColors.blackColor.withOpacity(0.2),
                       borderRadius: BorderRadius.circular(10.0),
                     ),
                     child: Padding(
@@ -140,11 +141,11 @@ class _FoodPredictCalculateLayoutState
                           Text(
                             'watering plan'.toUpperCase(),
                             style: GoogleFonts.openSans(
-                                color: Utils.whiteColor, fontSize: 15.0),
+                                color: UtilColors.whiteColor, fontSize: 15.0),
                           ),
                           Icon(
                             Icons.arrow_right,
-                            color: Utils.whiteColor,
+                            color: UtilColors.whiteColor,
                           )
                         ],
                       ),
@@ -159,7 +160,7 @@ class _FoodPredictCalculateLayoutState
                         top: 20.0, bottom: 20.0, left: 10.0, right: 20.0),
                     width: double.infinity,
                     decoration: BoxDecoration(
-                      color: Utils.blackColor.withOpacity(0.2),
+                      color: UtilColors.blackColor.withOpacity(0.2),
                       borderRadius: BorderRadius.circular(10.0),
                     ),
                     child: Padding(
@@ -170,11 +171,11 @@ class _FoodPredictCalculateLayoutState
                           Text(
                             'calery consumption plan'.toUpperCase(),
                             style: GoogleFonts.openSans(
-                                color: Utils.whiteColor, fontSize: 15.0),
+                                color: UtilColors.whiteColor, fontSize: 15.0),
                           ),
                           Icon(
                             Icons.arrow_right,
-                            color: Utils.whiteColor,
+                            color: UtilColors.whiteColor,
                           )
                         ],
                       ),

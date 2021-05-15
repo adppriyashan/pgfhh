@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:personalizeguidanceforahealthyheart/Models/Colors.dart';
 import 'package:personalizeguidanceforahealthyheart/Models/Utils.dart';
 
 class StressPredictSettingsLayout extends StatefulWidget {
@@ -28,7 +29,7 @@ class _StressPredictSettingsLayoutState
                 Text(
                   'settings'.toUpperCase(),
                   style: GoogleFonts.openSans(
-                      color: Utils.whiteColor, fontWeight: FontWeight.w600),
+                      color: UtilColors.whiteColor, fontWeight: FontWeight.w600),
                 ),
               ],
             ),
@@ -45,7 +46,7 @@ class _StressPredictSettingsLayoutState
                         top: 20.0, bottom: 20.0, left: 10.0, right: 20.0),
                     width: double.infinity,
                     decoration: BoxDecoration(
-                      color: Utils.blackColor.withOpacity(0.3),
+                      color: UtilColors.blackColor.withOpacity(0.3),
                       borderRadius: BorderRadius.circular(10.0),
                     ),
                     child: Padding(
@@ -56,12 +57,12 @@ class _StressPredictSettingsLayoutState
                           Text(
                             "personal information".toUpperCase(),
                             style: GoogleFonts.openSans(
-                                color: Utils.whiteColor,
+                                color: UtilColors.whiteColor,
                                 fontSize: 15.0,
                                 fontWeight: FontWeight.w600),
                           ),
                           Divider(
-                            color: Utils.whiteColor,
+                            color: UtilColors.whiteColor,
                           ),
                           SizedBox(
                             width: double.infinity,
@@ -85,7 +86,7 @@ class _StressPredictSettingsLayoutState
                                 Text(
                                   'Thilini Flutter',
                                   style: TextStyle(
-                                      color: Utils.whiteColor,
+                                      color: UtilColors.whiteColor,
                                       fontSize: 15.0,
                                       fontWeight: FontWeight.w600),
                                 ),
@@ -95,7 +96,7 @@ class _StressPredictSettingsLayoutState
                                 Text(
                                   'thilini@gmail.com',
                                   style: TextStyle(
-                                      color: Utils.whiteColor, fontSize: 12.0),
+                                      color: UtilColors.whiteColor, fontSize: 12.0),
                                 ),
                               ],
                             ),

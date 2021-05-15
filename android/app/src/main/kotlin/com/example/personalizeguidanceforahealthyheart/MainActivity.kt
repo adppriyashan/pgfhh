@@ -1,4 +1,4 @@
-package com.example.personalizeguidanceforahealthyheart
+package com.aries.personalizeguidanceforahealthyheart
 
 import io.flutter.embedding.android.FlutterActivity
 

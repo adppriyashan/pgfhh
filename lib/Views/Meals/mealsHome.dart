@@ -1,6 +1,6 @@
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:personalizeguidanceforahealthyheart/Models/Utils.dart';
+import 'package:personalizeguidanceforahealthyheart/Models/Colors.dart';
 import 'package:personalizeguidanceforahealthyheart/Views/Meals/Home%20Contents/mealsHomeCalculate.dart';
 import 'package:personalizeguidanceforahealthyheart/Views/Meals/Home%20Contents/mealsHistory.dart';
 import 'package:personalizeguidanceforahealthyheart/Views/Meals/Home%20Contents/mealsHomeLayout.dart';
@@ -30,7 +30,7 @@ class _FoodPredictHomeState extends State<FoodPredictHome> {
     return SafeArea(
         child: Scaffold(
       bottomNavigationBar: getBottomNavBar(),
-      backgroundColor: Utils.primaryColor,
+      backgroundColor: UtilColors.primaryColor,
       body: _layouts[_selectedIndex],
     ));
   }
@@ -41,43 +41,43 @@ class _FoodPredictHomeState extends State<FoodPredictHome> {
         TabItem(
             icon: Icon(
               Icons.calculate,
-              color: Utils.whiteColor,
+              color: UtilColors.whiteColor,
               size: 20.0,
             ),
             title: 'Calculate'),
         TabItem(
             icon: Icon(
               Icons.schedule,
-              color: Utils.whiteColor,
+              color: UtilColors.whiteColor,
               size: 20.0,
             ),
             title: 'Schedule'),
         TabItem(
             icon: Icon(
               Icons.home,
-              color: Utils.whiteColor,
+              color: UtilColors.whiteColor,
               size: 20.0,
             ),
             title: 'Home'),
         TabItem(
             icon: Icon(
               Icons.history_edu,
-              color: Utils.whiteColor,
+              color: UtilColors.whiteColor,
               size: 20.0,
             ),
             title: 'History'),
         TabItem(
             icon: Icon(
               Icons.settings,
-              color: Utils.whiteColor,
+              color: UtilColors.whiteColor,
               size: 20.0,
             ),
             title: 'Settings'),
       ],
       initialActiveIndex: 2,
-      activeColor: Utils.primaryColor,
-      backgroundColor: Utils.blackColor,
-      color: Utils.whiteColor.withOpacity(0.8),
+      activeColor: UtilColors.primaryColor,
+      backgroundColor: UtilColors.blackColor,
+      color: UtilColors.whiteColor.withOpacity(0.8),
       onTap: (_tab) {
         setState(() {
           print(_tab);

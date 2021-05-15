@@ -1,7 +1,7 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:personalizeguidanceforahealthyheart/Models/Utils.dart';
+import 'package:personalizeguidanceforahealthyheart/Models/Colors.dart';
 
 class HomeStressGraph extends StatefulWidget {
   HomeStressGraph({Key key}) : super(key: key);
@@ -45,13 +45,13 @@ class _HomeStressGraphState extends State<HomeStressGraph> {
         drawVerticalLine: true,
         getDrawingHorizontalLine: (value) {
           return FlLine(
-            color: Utils.blackColor.withOpacity(0.3),
+            color: UtilColors.blackColor.withOpacity(0.3),
             strokeWidth: 1,
           );
         },
         getDrawingVerticalLine: (value) {
           return FlLine(
-            color: Utils.blackColor.withOpacity(0.3),
+            color: UtilColors.blackColor.withOpacity(0.3),
             strokeWidth: 1,
           );
         },
@@ -62,7 +62,7 @@ class _HomeStressGraphState extends State<HomeStressGraph> {
           showTitles: true,
           reservedSize: 22,
           getTextStyles: (value) => GoogleFonts.openSans(
-              color: Utils.whiteColor,
+              color: UtilColors.whiteColor,
               fontWeight: FontWeight.w600,
               fontSize: 11),
           getTitles: (value) {
@@ -81,7 +81,7 @@ class _HomeStressGraphState extends State<HomeStressGraph> {
         leftTitles: SideTitles(
           showTitles: true,
           getTextStyles: (value) => GoogleFonts.openSans(
-            color: Utils.whiteColor,
+            color: UtilColors.whiteColor,
             fontWeight: FontWeight.w600,
             fontSize: 11,
           ),
@@ -103,7 +103,7 @@ class _HomeStressGraphState extends State<HomeStressGraph> {
       borderData: FlBorderData(
           show: true,
           border:
-              Border.all(color: Utils.blackColor.withOpacity(0.3), width: 1)),
+              Border.all(color: UtilColors.blackColor.withOpacity(0.3), width: 1)),
       minX: 0,
       maxX: 11,
       minY: 0,

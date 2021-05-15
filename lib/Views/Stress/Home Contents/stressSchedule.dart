@@ -2,6 +2,7 @@ import 'package:day_night_time_picker/lib/constants.dart';
 import 'package:day_night_time_picker/lib/daynight_timepicker.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:personalizeguidanceforahealthyheart/Models/Colors.dart';
 import 'package:personalizeguidanceforahealthyheart/Models/Utils.dart';
 
 class StressPredictScheduleLayout extends StatefulWidget {
@@ -39,7 +40,7 @@ class _StressPredictScheduleLayoutState
                 Text(
                   'schedule'.toUpperCase(),
                   style: GoogleFonts.openSans(
-                      color: Utils.whiteColor, fontWeight: FontWeight.w600),
+                      color: UtilColors.whiteColor, fontWeight: FontWeight.w600),
                 ),
               ],
             ),
@@ -56,7 +57,7 @@ class _StressPredictScheduleLayoutState
                         top: 20.0, bottom: 20.0, left: 10.0, right: 20.0),
                     width: double.infinity,
                     decoration: BoxDecoration(
-                      color: Utils.blackColor,
+                      color: UtilColors.blackColor,
                       borderRadius: BorderRadius.circular(10.0),
                     ),
                     child: Padding(
@@ -66,7 +67,7 @@ class _StressPredictScheduleLayoutState
                             Text(
                               'manage your schedule'.toUpperCase(),
                               style: GoogleFonts.openSans(
-                                  color: Utils.primaryColor,
+                                  color: UtilColors.primaryColor,
                                   fontSize: 15.0,
                                   fontWeight: FontWeight.w600),
                             ),
@@ -91,7 +92,7 @@ class _StressPredictScheduleLayoutState
                               child: Container(
                                   width: Utils.displaySize.width * 0.7,
                                   decoration: BoxDecoration(
-                                      color: Utils.primaryColor,
+                                      color: UtilColors.primaryColor,
                                       borderRadius:
                                           BorderRadius.circular(100.0)),
                                   padding: EdgeInsets.all(10.0),
@@ -101,12 +102,12 @@ class _StressPredictScheduleLayoutState
                                     children: [
                                       Icon(
                                         Icons.add,
-                                        color: Utils.whiteColor,
+                                        color: UtilColors.whiteColor,
                                       ),
                                       Text(
                                         'manage your schedule'.toUpperCase(),
                                         style: GoogleFonts.openSans(
-                                            color: Utils.whiteColor,
+                                            color: UtilColors.whiteColor,
                                             fontSize: 15.0,
                                             fontWeight: FontWeight.w600),
                                       )
@@ -121,7 +122,7 @@ class _StressPredictScheduleLayoutState
                   height: 20.0,
                 ),
                 Divider(
-                  color: Utils.blackColor,
+                  color: UtilColors.blackColor,
                 ),
                 SizedBox(
                   height: 20.0,
@@ -151,7 +152,7 @@ class _StressPredictScheduleLayoutState
             EdgeInsets.only(top: 20.0, bottom: 20.0, left: 10.0, right: 20.0),
         width: double.infinity,
         decoration: BoxDecoration(
-          color: Utils.blackColor.withOpacity(0.2),
+          color: UtilColors.blackColor.withOpacity(0.2),
           borderRadius: BorderRadius.circular(10.0),
         ),
         child: Padding(
@@ -162,7 +163,7 @@ class _StressPredictScheduleLayoutState
               Text(
                 'take your breakfast'.toUpperCase(),
                 style: GoogleFonts.openSans(
-                    color: Utils.whiteColor, fontSize: 15.0),
+                    color: UtilColors.whiteColor, fontSize: 15.0),
               ),
               Row(
                 children: [
@@ -171,12 +172,12 @@ class _StressPredictScheduleLayoutState
                     child: Text(
                       '08:30 AM'.toUpperCase(),
                       style: GoogleFonts.openSans(
-                          color: Utils.whiteColor, fontSize: 15.0),
+                          color: UtilColors.whiteColor, fontSize: 15.0),
                     ),
                   ),
                   Icon(
                     Icons.delete,
-                    color: Utils.redColor,
+                    color: UtilColors.redColor,
                   )
                 ],
               )
