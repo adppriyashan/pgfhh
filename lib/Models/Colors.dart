@@ -13,4 +13,6 @@ class UtilColors {
   static Color primaryStatusBarColor = Color.fromRGBO(0, 0, 0, 1);
   static Color redColor = Color.fromRGBO(198, 40, 40, 1);
   static Color greenColor = Color.fromRGBO(76, 175, 80, 1);
+  static Color blueColor = Color.fromRGBO(21, 101, 192, 1);
+  static Color purpleColor = Color.fromRGBO(106, 27, 154, 1);
 }

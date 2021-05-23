@@ -33,6 +33,7 @@ dependencies:
   ml_dataframe: ^0.5.1
   ml_preprocessing: ^6.0.0
   flutter_svg: ^0.22.0
+  percent_indicator: ^3.0.1
   
 
 
@@ -47,6 +48,9 @@ flutter:
   assets:
     - assets/img/meal_sample.png
     - assets/img/user_sample.png
+    - assets/img/excercise_sample.png
+    - assets/img/stress_activity.png
+    - assets/img/stress_home_img.png
     - assets/img/logo.png
     - assets/img/login_bg.png
     - assets/img/logo.svg

@@ -12,8 +12,9 @@ class HomeStressGraph extends StatefulWidget {
 
 class _HomeStressGraphState extends State<HomeStressGraph> {
   List<Color> gradientColors = [
-    const Color(0xff23b6e6),
-    const Color(0xff02d39a),
+    UtilColors.redColor,
+    UtilColors.blueColor,
+    UtilColors.purpleColor
   ];
 
   bool showAvg = false;
@@ -102,8 +103,8 @@ class _HomeStressGraphState extends State<HomeStressGraph> {
       ),
       borderData: FlBorderData(
           show: true,
-          border:
-              Border.all(color: UtilColors.blackColor.withOpacity(0.3), width: 1)),
+          border: Border.all(
+              color: UtilColors.blackColor.withOpacity(0.3), width: 1)),
       minX: 0,
       maxX: 11,
       minY: 0,

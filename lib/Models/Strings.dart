@@ -7,4 +7,5 @@ class UtilStrings {
   static var loginSubTitle = 'Unlock your access with existing account';
   static var registrationTitle = 'Registration';
   static var registrationSubTitle = 'Create your healthy account';
+  static var forgetPasswordSubTitle = 'Recover your heathy account password';
 }

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:personalizeguidanceforahealthyheart/Controllers/Auth/AuthController.dart';
 import 'package:personalizeguidanceforahealthyheart/Controllers/Auth/AuthValidator.dart';
 import 'package:personalizeguidanceforahealthyheart/Models/Colors.dart';
+import 'package:personalizeguidanceforahealthyheart/Models/Strings.dart';
 import 'package:personalizeguidanceforahealthyheart/Models/Utils.dart';
 
 class RecoverPassword extends StatefulWidget {
@@ -51,10 +52,7 @@ class _RecoverPasswordState extends State<RecoverPassword> {
                 Container(
                   width: Utils.displaySize.width,
                   height: Utils.displaySize.height,
-                  child: Image.asset(
-                    'assets/images/login_bg.png',
-                    fit: BoxFit.cover,
-                  ),
+                  decoration: Utils.getGradientBackground(),
                 ),
                 Container(
                   width: Utils.displaySize.width,
@@ -63,11 +61,6 @@ class _RecoverPasswordState extends State<RecoverPassword> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Container(
-                        padding: EdgeInsets.only(bottom: spaceAround),
-                        width: Utils.displaySize.width * 0.4,
-                        child: Image.asset('assets/images/logo.png'),
-                      ),
                       Padding(
                         padding: EdgeInsets.symmetric(
                             horizontal: spaceAround, vertical: spaceAround),
@@ -84,12 +77,46 @@ class _RecoverPasswordState extends State<RecoverPassword> {
                                     ),
                                     Align(
                                       alignment: Alignment.topCenter,
-                                      child: Text(
-                                          'Recover Forget Password.'
+                                      child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          Text(
+                                              UtilStrings.appTitleSection1
+                                                  .toUpperCase(),
+                                              style: TextStyle(
+                                                  fontSize: 23.0,
+                                                  color:
+                                                      UtilColors.primaryColor)),
+                                          Padding(
+                                            padding: EdgeInsets.only(left: 5.0),
+                                            child: Text(
+                                                UtilStrings.appTitleSection2
+                                                    .toUpperCase(),
+                                                style: TextStyle(
+                                                    fontSize: 23.0,
+                                                    color: UtilColors
+                                                        .secondaryColor)),
+                                          )
+                                        ],
+                                      ),
+                                    ),
+                                    Align(
+                                      alignment: Alignment.topCenter,
+                                      child: Padding(
+                                        padding: EdgeInsets.only(
+                                            top: 5.0, bottom: 10.0),
+                                        child: Text(
+                                          UtilStrings.forgetPasswordSubTitle
                                               .toUpperCase(),
                                           style: TextStyle(
-                                              fontSize: 18.0,
-                                              color: UtilColors.greyColor)),
+                                              fontSize: 11.0,
+                                              fontWeight: FontWeight.w600,
+                                              foreground: Paint()
+                                                ..shader =
+                                                    Utils.getTextGradient()),
+                                        ),
+                                      ),
                                     ),
                                     Divider(),
                                     SizedBox(
