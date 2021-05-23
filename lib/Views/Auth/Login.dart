@@ -128,7 +128,7 @@ class _LoginState extends State<Login> {
                                         padding: EdgeInsets.only(
                                             top: 5.0, bottom: 10.0),
                                         child: Text(
-                                          'Unlock your access with existing account'
+                                          UtilStrings.loginSubTitle
                                               .toUpperCase(),
                                           style: TextStyle(
                                               fontSize: 11.0,

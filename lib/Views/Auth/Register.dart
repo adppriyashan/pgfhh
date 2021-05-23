@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:personalizeguidanceforahealthyheart/Controllers/Auth/AuthController.dart';
 import 'package:personalizeguidanceforahealthyheart/Controllers/Auth/AuthValidator.dart';
 import 'package:personalizeguidanceforahealthyheart/Models/Colors.dart';
+import 'package:personalizeguidanceforahealthyheart/Models/Strings.dart';
 import 'package:personalizeguidanceforahealthyheart/Models/Utils.dart';
 
 class Register extends StatefulWidget {
@@ -59,10 +60,7 @@ class _RegisterState extends State<Register> {
                 Container(
                   width: Utils.displaySize.width,
                   height: Utils.displaySize.height,
-                  child: Image.asset(
-                    'assets/images/login_bg.png',
-                    fit: BoxFit.cover,
-                  ),
+                  decoration: Utils.getGradientBackground(),
                 ),
                 Container(
                   width: Utils.displaySize.width,
@@ -87,22 +85,44 @@ class _RegisterState extends State<Register> {
                                     ),
                                     Align(
                                       alignment: Alignment.topCenter,
-                                      child: Text('registration'.toUpperCase(),
-                                          style: TextStyle(
-                                              fontSize: 18.0,
-                                              color: UtilColors.greyColor)),
+                                      child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          Text(
+                                              UtilStrings.appTitleSection1
+                                                  .toUpperCase(),
+                                              style: TextStyle(
+                                                  fontSize: 23.0,
+                                                  color:
+                                                      UtilColors.primaryColor)),
+                                          Padding(
+                                            padding: EdgeInsets.only(left: 5.0),
+                                            child: Text(
+                                                UtilStrings.appTitleSection2
+                                                    .toUpperCase(),
+                                                style: TextStyle(
+                                                    fontSize: 23.0,
+                                                    color: UtilColors
+                                                        .secondaryColor)),
+                                          )
+                                        ],
+                                      ),
                                     ),
                                     Align(
                                       alignment: Alignment.topCenter,
                                       child: Padding(
                                         padding: EdgeInsets.only(
-                                            top: 5.0, bottom: 15.0),
+                                            top: 5.0, bottom: 10.0),
                                         child: Text(
-                                          'Grow up your knowledge in to high level.'
+                                          UtilStrings.registrationSubTitle
                                               .toUpperCase(),
                                           style: TextStyle(
                                               fontSize: 11.0,
-                                              color: UtilColors.greyColor),
+                                              fontWeight: FontWeight.w600,
+                                              foreground: Paint()
+                                                ..shader =
+                                                    Utils.getTextGradient()),
                                         ),
                                       ),
                                     ),
