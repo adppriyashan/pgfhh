@@ -169,7 +169,7 @@ class _HomeDrawerState extends State<HomeDrawer> {
             color: UtilColors.blackColor.withOpacity(0.8),
           ),
           title: Text(
-            'Excercise Meter',
+            'Fitness Scheduler',
             style: GoogleFonts.openSans(
                 color: UtilColors.blackColor, fontWeight: FontWeight.w400),
           ),
