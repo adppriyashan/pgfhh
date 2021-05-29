@@ -52,9 +52,12 @@ flutter:
     - assets/img/stress_activity.png
     - assets/img/stress_home_img.png
     - assets/img/logo.png
+    - assets/img/morninglogo.png
+    - assets/img/nightlogo.png
     - assets/img/login_bg.png
     - assets/img/logo.svg
     - assets/img/logowhite.svg
+    - assets/img/excerciseimg.png
 
 
   # fonts:

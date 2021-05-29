@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:personalizeguidanceforahealthyheart/Models/Colors.dart';
+import 'package:personalizeguidanceforahealthyheart/Models/Utils.dart';
 
 class PopUpLoading extends StatefulWidget {
   @override
@@ -36,9 +38,29 @@ class PopUpLoadingState extends State<PopUpLoading>
           scale: scaleAnimation,
           child: Container(
             alignment: Alignment.center,
-            child: new CircularProgressIndicator(
-              valueColor:
-                  new AlwaysStoppedAnimation<Color>(UtilColors.primaryColor),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                new CircularProgressIndicator(
+                  valueColor: new AlwaysStoppedAnimation<Color>(
+                      UtilColors.primaryColor),
+                ),
+                SizedBox(
+                  height: 10.0,
+                ),
+                SizedBox(
+                  width: Utils.displaySize.width * 0.6,
+                  child: Text(
+                    (Utils.loadingMessage == null)
+                        ? "Please Wait"
+                        : Utils.loadingMessage.toString(),
+                    textAlign: TextAlign.center,
+                    style: GoogleFonts.openSans(
+                        color: UtilColors.whiteColor, fontSize: 12.0),
+                  ),
+                )
+              ],
             ),
           ),
         ),

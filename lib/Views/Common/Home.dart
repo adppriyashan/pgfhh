@@ -5,6 +5,7 @@ import 'package:personalizeguidanceforahealthyheart/Models/Colors.dart';
 import 'package:personalizeguidanceforahealthyheart/Models/Utils.dart';
 import 'package:personalizeguidanceforahealthyheart/Views/Common/HomeDrawer.dart';
 import 'package:personalizeguidanceforahealthyheart/Views/Stress/stressGraph.dart';
+import 'package:personalizeguidanceforahealthyheart/Views/Widgets/PopUps/PopUpRiskDataAdd.dart';
 
 class Home extends StatefulWidget {
   Home({Key key}) : super(key: key);
@@ -22,7 +23,9 @@ class _HomeState extends State<Home> {
         child: Scaffold(
       key: _scaffoldKey,
       drawer: Drawer(
-        child: HomeDrawer(),
+        child: HomeDrawer(
+          selection: 1,
+        ),
       ),
       body: Container(
         width: double.infinity,
@@ -55,7 +58,7 @@ class _HomeState extends State<Home> {
                             }
                           },
                           child: Icon(
-                            Icons.menu,
+                            Icons.menu_sharp,
                             color: UtilColors.whiteColor,
                           ),
                         ),
@@ -66,7 +69,7 @@ class _HomeState extends State<Home> {
                               fontWeight: FontWeight.w600),
                         ),
                         Icon(
-                          Icons.person_outline,
+                          Icons.account_circle_sharp,
                           color: UtilColors.whiteColor,
                         ),
                       ],
@@ -85,43 +88,51 @@ class _HomeState extends State<Home> {
                               radius: Utils.displaySize.width * 0.7,
                               lineWidth: 30.0,
                               percent: 0.5,
-                              center: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Text(
-                                    'YOUR RISK LEVEL IS'.toUpperCase(),
-                                    style: GoogleFonts.openSans(
-                                        fontSize: 9,
-                                        color: UtilColors.whiteColor,
-                                        fontWeight: FontWeight.w600),
-                                  ),
-                                  Text(
-                                    'NORMAL'.toUpperCase(),
-                                    style: GoogleFonts.openSans(
-                                        fontSize: 28.0,
-                                        color: UtilColors.whiteColor,
-                                        fontWeight: FontWeight.w600),
-                                  ),
-                                  Container(
-                                    margin: EdgeInsets.only(top: 5.0),
-                                    decoration: BoxDecoration(
-                                        color: UtilColors.blackColor
-                                            .withOpacity(0.8),
-                                        border: Border.all(
-                                            color: UtilColors.blackColor),
-                                        borderRadius:
-                                            BorderRadius.circular(10.0)),
-                                    padding: EdgeInsets.symmetric(
-                                        horizontal: 10.0, vertical: 2.0),
-                                    child: Text(
-                                      'test again'.toUpperCase(),
+                              center: GestureDetector(
+                                onTap: () async {
+                                  await showDialog(
+                                    context: context,
+                                    builder: (_) => PopUpRiskDataAdd(),
+                                  ).then((onValue) {});
+                                },
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Text(
+                                      'YOUR RISK LEVEL IS'.toUpperCase(),
                                       style: GoogleFonts.openSans(
-                                          fontSize: Utils.smallFonts,
+                                          fontSize: 9,
                                           color: UtilColors.whiteColor,
-                                          fontWeight: FontWeight.w700),
+                                          fontWeight: FontWeight.w600),
                                     ),
-                                  ),
-                                ],
+                                    Text(
+                                      'NORMAL'.toUpperCase(),
+                                      style: GoogleFonts.openSans(
+                                          fontSize: 28.0,
+                                          color: UtilColors.whiteColor,
+                                          fontWeight: FontWeight.w600),
+                                    ),
+                                    Container(
+                                      margin: EdgeInsets.only(top: 5.0),
+                                      decoration: BoxDecoration(
+                                          color: UtilColors.blackColor
+                                              .withOpacity(0.8),
+                                          border: Border.all(
+                                              color: UtilColors.blackColor),
+                                          borderRadius:
+                                              BorderRadius.circular(10.0)),
+                                      padding: EdgeInsets.symmetric(
+                                          horizontal: 10.0, vertical: 2.0),
+                                      child: Text(
+                                        'test again'.toUpperCase(),
+                                        style: GoogleFonts.openSans(
+                                            fontSize: Utils.smallFonts,
+                                            color: UtilColors.whiteColor,
+                                            fontWeight: FontWeight.w700),
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
                               progressColor: UtilColors.whiteColor,
                               arcType: ArcType.FULL,

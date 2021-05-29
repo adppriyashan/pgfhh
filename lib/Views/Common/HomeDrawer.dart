@@ -4,15 +4,24 @@ import 'package:personalizeguidanceforahealthyheart/Controllers/Auth/AuthControl
 import 'package:personalizeguidanceforahealthyheart/Models/Colors.dart';
 import 'package:personalizeguidanceforahealthyheart/Models/Utils.dart';
 import 'package:personalizeguidanceforahealthyheart/Views/Auth/Login.dart';
+import 'package:personalizeguidanceforahealthyheart/Views/Common/Schedule.dart';
+import 'package:personalizeguidanceforahealthyheart/Views/Excercise/Fitness.dart';
+import 'package:personalizeguidanceforahealthyheart/Views/Stress/stressHome.dart';
 
 class HomeDrawer extends StatefulWidget {
-  HomeDrawer({Key key}) : super(key: key);
+  int selection = 1;
+
+  HomeDrawer({this.selection});
 
   @override
-  _HomeDrawerState createState() => _HomeDrawerState();
+  _HomeDrawerState createState() => _HomeDrawerState(selection: this.selection);
 }
 
 class _HomeDrawerState extends State<HomeDrawer> {
+  int selection;
+
+  _HomeDrawerState({this.selection});
+
   AuthController _authController = new AuthController();
 
   @override
@@ -84,6 +93,9 @@ class _HomeDrawerState extends State<HomeDrawer> {
           ),
         ),
         ListTile(
+          tileColor: (this.selection == 1)
+              ? UtilColors.primaryColor.withOpacity(0.3)
+              : UtilColors.whiteColor,
           leading: Icon(
             Icons.home,
             color: UtilColors.blackColor.withOpacity(0.8),
@@ -100,6 +112,9 @@ class _HomeDrawerState extends State<HomeDrawer> {
           ),
         ),
         ListTile(
+          tileColor: (this.selection == 2)
+              ? UtilColors.primaryColor.withOpacity(0.3)
+              : UtilColors.whiteColor,
           leading: Icon(
             Icons.home_work,
             color: UtilColors.blackColor.withOpacity(0.8),
@@ -114,8 +129,15 @@ class _HomeDrawerState extends State<HomeDrawer> {
             color: UtilColors.primaryColor,
             size: 15.0,
           ),
+          onTap: () {
+            Navigator.of(context)
+                .push(MaterialPageRoute(builder: ((_) => StressPredictHome())));
+          },
         ),
         ListTile(
+          tileColor: (this.selection == 3)
+              ? UtilColors.primaryColor.withOpacity(0.3)
+              : UtilColors.whiteColor,
           leading: Icon(
             Icons.food_bank,
             color: UtilColors.blackColor.withOpacity(0.8),
@@ -132,12 +154,15 @@ class _HomeDrawerState extends State<HomeDrawer> {
           ),
         ),
         ListTile(
+          tileColor: (this.selection == 4)
+              ? UtilColors.primaryColor.withOpacity(0.3)
+              : UtilColors.whiteColor,
           leading: Icon(
-            Icons.explicit_rounded,
+            Icons.fitness_center,
             color: UtilColors.blackColor.withOpacity(0.8),
           ),
           title: Text(
-            'Excercise Meter',
+            'Fitness Scheduler',
             style: GoogleFonts.openSans(
                 color: UtilColors.blackColor, fontWeight: FontWeight.w400),
           ),
@@ -146,8 +171,15 @@ class _HomeDrawerState extends State<HomeDrawer> {
             color: UtilColors.primaryColor,
             size: 15.0,
           ),
+          onTap: () {
+            Navigator.of(context)
+                .push(MaterialPageRoute(builder: ((_) => FitnessScheduler())));
+          },
         ),
         ListTile(
+          tileColor: (this.selection == 5)
+              ? UtilColors.primaryColor.withOpacity(0.3)
+              : UtilColors.whiteColor,
           leading: Icon(
             Icons.indeterminate_check_box,
             color: UtilColors.blackColor.withOpacity(0.8),
@@ -162,24 +194,15 @@ class _HomeDrawerState extends State<HomeDrawer> {
             color: UtilColors.primaryColor,
             size: 15.0,
           ),
+          onTap: () {
+            Navigator.push(
+                context, MaterialPageRoute(builder: (_) => Reminders()));
+          },
         ),
         ListTile(
-          leading: Icon(
-            Icons.explicit_rounded,
-            color: UtilColors.blackColor.withOpacity(0.8),
-          ),
-          title: Text(
-            'Fitness Scheduler',
-            style: GoogleFonts.openSans(
-                color: UtilColors.blackColor, fontWeight: FontWeight.w400),
-          ),
-          trailing: Icon(
-            Icons.arrow_forward_ios,
-            color: UtilColors.primaryColor,
-            size: 15.0,
-          ),
-        ),
-        ListTile(
+          tileColor: (this.selection == 7)
+              ? UtilColors.primaryColor.withOpacity(0.3)
+              : UtilColors.whiteColor,
           leading: Icon(
             Icons.privacy_tip,
             color: UtilColors.blackColor.withOpacity(0.8),
@@ -196,6 +219,9 @@ class _HomeDrawerState extends State<HomeDrawer> {
           ),
         ),
         ListTile(
+          tileColor: (this.selection == 8)
+              ? UtilColors.primaryColor.withOpacity(0.3)
+              : UtilColors.whiteColor,
           leading: Icon(
             Icons.settings,
             color: UtilColors.blackColor.withOpacity(0.8),

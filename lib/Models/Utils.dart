@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:personalizeguidanceforahealthyheart/Models/Colors.dart';
 import 'package:personalizeguidanceforahealthyheart/Models/User.dart';
 import 'package:personalizeguidanceforahealthyheart/Views/Widgets/PopUps/PopUpLoading.dart';
@@ -14,6 +15,8 @@ class Utils {
   static Size displaySize;
   static ProfileUser profileUser;
 
+  static var loadingMessage;
+
   static var lightNavbar = SystemUiOverlayStyle.light.copyWith(
       statusBarBrightness: Brightness.light,
       systemNavigationBarColor: UtilColors.blackColor,
@@ -26,23 +29,29 @@ class Utils {
 
   //TextStyles
   static TextStyle getprimaryStyle(Color color) {
-    return TextStyle(color: color, fontFamily: 'Natosans');
+    return GoogleFonts.openSans(color: color);
+  }
+
+    static TextStyle getprimaryStyleSmall(Color color) {
+    return GoogleFonts.openSans(color: color, fontSize: 13.0);
   }
 
   static TextStyle getprimaryBoldStyle(Color color) {
-    return TextStyle(
-        color: color, fontFamily: 'Natosans', fontWeight: FontWeight.bold);
+    return GoogleFonts.openSans(color: color, fontWeight: FontWeight.bold);
   }
 
   static TextStyle getprimaryFieldTextStyle(Color color) {
-    return TextStyle(
-        color: UtilColors.blackColor, fontFamily: 'Natosans', fontSize: 13.0);
+    return GoogleFonts.openSans(color: UtilColors.blackColor, fontSize: 13.0);
+  }
+
+  static TextStyle getprimaryFieldTextStylePopUp(Color color) {
+    return GoogleFonts.openSans(color: UtilColors.primaryColor, fontSize: 13.0);
   }
 
   //TextFormField Styles
 
-  static double borderRadius = 15.0;
-  static double buttonBorderRadius = 10.0;
+  static double borderRadius = 5.0;
+  static double buttonBorderRadius = 5.0;
 
   static InputDecoration getDefaultTextInputDecoration(
       String label, Icon suffixIcon) {
@@ -59,11 +68,32 @@ class Utils {
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(borderRadius),
-          borderSide: BorderSide(color: UtilColors.secondaryColor, width: 1.5),
+          borderSide: BorderSide(color: UtilColors.secondaryColor, width: 1),
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(borderRadius),
-          borderSide: BorderSide(color: UtilColors.primaryColor, width: 2.0),
+          borderSide: BorderSide(color: UtilColors.primaryColor, width: 1),
+        ));
+  }
+
+  static InputDecoration getDefaultDropDownInputDecoration(
+      String label, Icon suffixIcon) {
+    return InputDecoration(
+        errorStyle: TextStyle(fontSize: 11, color: Colors.red),
+        labelStyle: TextStyle(fontSize: 13.0, color: UtilColors.greyColor),
+        suffixIcon: suffixIcon,
+        fillColor: Colors.white,
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(borderRadius),
+          borderSide: BorderSide(),
+        ),
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(borderRadius),
+          borderSide: BorderSide(color: UtilColors.secondaryColor, width: 1),
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(borderRadius),
+          borderSide: BorderSide(color: UtilColors.primaryColor, width: 1),
         ));
   }
 
@@ -82,11 +112,23 @@ class Utils {
     });
   }
 
+  static Future showLoaderWithCustomMessage(context, message) async {
+    Utils.loadingMessage = message;
+    await showDialog(
+      context: context,
+      builder: (_) => PopUpLoading(),
+    ).then((onValue) {
+      parentLoadingContext = context;
+      checkShowLoader = true;
+    });
+  }
+
   static Future hideLoader() async {
     if (checkShowLoader == true && parentLoadingContext != null) {
       Navigator.pop(parentLoadingContext);
       parentLoadingContext = null;
       checkShowLoader = false;
+      Utils.loadingMessage = null;
     }
   }
 

@@ -1,6 +1,7 @@
 import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:personalizeguidanceforahealthyheart/Controllers/Auth/AuthController.dart';
 import 'package:personalizeguidanceforahealthyheart/Controllers/Auth/AuthValidator.dart';
 import 'package:personalizeguidanceforahealthyheart/Models/Colors.dart';
@@ -235,49 +236,47 @@ class _LoginState extends State<Login> {
                                     Row(
                                       children: [
                                         SizedBox(
-                                          child: FlatButton(
-                                            onPressed: () async {
-                                              if (_loginFormKey.currentState
-                                                  .validate()) {
-                                                FocusScope.of(context)
-                                                    .unfocus();
-                                                Utils.showLoader(context);
-
-                                                try {
-                                                  await _authController
-                                                      .doLogin({
-                                                    'email': _email.text,
-                                                    'password': _password.text
-                                                  }).then((value) {
-                                                    if (value == true) {
-                                                      Navigator.pushReplacement(
-                                                          context,
-                                                          MaterialPageRoute(
-                                                              builder: (_) =>
-                                                                  Home()));
-                                                    }
-                                                  });
-                                                } catch (e) {
-                                                  Utils.hideLoaderCurrrent(
-                                                      context);
-                                                }
-                                              }
-                                            },
-                                            child: Text(
-                                              "LET'S START",
-                                            ),
-                                            color: UtilColors.primaryColor,
-                                            textColor: Colors.white,
-                                            shape: RoundedRectangleBorder(
-                                                borderRadius:
-                                                    BorderRadius.circular(Utils
-                                                        .buttonBorderRadius),
-                                                side: BorderSide(
-                                                    color: UtilColors
-                                                        .secondaryColor)),
-                                            height: 42.0,
+                                            child: TextButton(
+                                          child: Text(
+                                            "LET'S START",
+                                            style: GoogleFonts.openSans(),
                                           ),
-                                        ),
+                                          style: ButtonStyle(
+                                            foregroundColor:
+                                                MaterialStateProperty.all<
+                                                        Color>(
+                                                    UtilColors.whiteColor),
+                                            backgroundColor:
+                                                MaterialStateProperty.all<
+                                                        Color>(
+                                                    UtilColors.primaryColor),
+                                          ),
+                                          onPressed: () async {
+                                            if (_loginFormKey.currentState
+                                                .validate()) {
+                                              FocusScope.of(context).unfocus();
+                                              Utils.showLoader(context);
+
+                                              try {
+                                                await _authController.doLogin({
+                                                  'email': _email.text,
+                                                  'password': _password.text
+                                                }).then((value) {
+                                                  if (value == true) {
+                                                    Navigator.pushReplacement(
+                                                        context,
+                                                        MaterialPageRoute(
+                                                            builder: (_) =>
+                                                                Home()));
+                                                  }
+                                                });
+                                              } catch (e) {
+                                                Utils.hideLoaderCurrrent(
+                                                    context);
+                                              }
+                                            }
+                                          },
+                                        )),
                                         Padding(
                                           padding: EdgeInsets.only(left: 10.0),
                                           child: GestureDetector(
@@ -312,18 +311,12 @@ class _LoginState extends State<Login> {
                                                                 Home())));
                                           },
                                           style: TextButton.styleFrom(
-                                              backgroundColor: UtilColors
-                                                  .whiteColorLight,
+                                              backgroundColor:
+                                                  UtilColors.whiteColorLight,
                                               side: BorderSide(
                                                   color:
                                                       UtilColors.primaryColor,
                                                   width: 1),
-                                              shape:
-                                                  const BeveledRectangleBorder(
-                                                      borderRadius:
-                                                          BorderRadius.all(
-                                                              Radius.circular(
-                                                                  5))),
                                               primary:
                                                   UtilColors.primaryColorLight),
                                           child: Text(
